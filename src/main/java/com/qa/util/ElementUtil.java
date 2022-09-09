@@ -12,17 +12,12 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.text.PDFTextStripper;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
-import java.io.InputStream;
-import java.io.BufferedInputStream;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -91,7 +86,7 @@ public class ElementUtil {
 	public static String mainWindow;
 	public static ExtentHtmlReporter htmlReporter;
 	public static ExtentReports extentReport;
-	static String excelFilePath = "D:\\WorkingDirectory\\MODOT\\src\\test\\resources\\DataProvider\\FetchData.xlsx";
+	
 public static ElementUtil getInstance(){
 
 		if(elementUtil==null){
@@ -297,7 +292,7 @@ ImageIO.write(fpScreenshot.getImage(),"PNG",new File(destination));
 	public static  void webEditTxtChange(WebElement inputObject,String value) {
 		try
 		{
-			wait = new WebDriverWait(driver, Duration.ofSeconds(100));
+			wait = new WebDriverWait(driver, Duration.ofSeconds(200));
 			wait.until(ExpectedConditions.visibilityOf(inputObject));
 			if(!value.equals("")) {
 				inputObject.clear();
@@ -1447,7 +1442,7 @@ ImageIO.write(fpScreenshot.getImage(),"PNG",new File(destination));
 				  Sheet newSheet;
 				  Row row ;
 				  Cell cell;
-				   inputStream = new FileInputStream(new File(excelFilePath));
+				   inputStream = new FileInputStream(new File(ConfigReader.writeexcel()));
 
 				   workbook = WorkbookFactory.create(inputStream);
 				  for (int i=0; i<workbook.getNumberOfSheets(); i++) {
@@ -1470,7 +1465,7 @@ ImageIO.write(fpScreenshot.getImage(),"PNG",new File(destination));
 				   cell = row.createCell(cellnum);  
 			       cell.setCellValue(value);
 		               FileOutputStream out = new FileOutputStream(
-		                   new File(excelFilePath));
+		                   new File(ConfigReader.writeexcel()));
 		               workbook.write(out);
 		               workbook.close();
 		               out.close();

@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Grasshopper Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Sep 8, 2022 03:03:00 pm</span></a>
+<a href="#"><span class="badge badge-primary">Sep 9, 2022 10:43:27 am</span></a>
 </li>
 </ul>
 </div>
@@ -61,13 +61,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Sep 8, 2022 03:03:00 pm</h3>
+<h3>Sep 9, 2022 10:43:27 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Sep 8, 2022 03:05:12 pm</h3>
+<h3>Sep 9, 2022 10:46:28 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -138,7 +138,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>12</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>48</b> steps passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -157,7 +157,7 @@
 </div></div>
 <script>
 var timeline = {
-"Reinstate Fleet feature":130.636
+"Renewal after Reinstatement":179.774
 };
 </script>
 <div class="row">
@@ -203,7 +203,7 @@ warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 12,
+passGrandChild: 48,
 failGrandChild: 0,
 warningGrandChild: 0,
 skipGrandChild: 0,
@@ -233,9 +233,9 @@ eventsCount: 5,
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Reinstate Fleet feature</p>
+            <p class="name">Renewal after Reinstatement</p>
             <p class="text-sm">
-              <span>3:03:01 pm</span> / <span>00:02:10:636</span>
+              <span>10:43:28 am</span> / <span>00:02:59:774</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -243,10 +243,10 @@ eventsCount: 5,
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Reinstate Fleet feature</h5>
-<span class='badge badge-success'>09.08.2022 3:03:01 pm</span>
-<span class='badge badge-danger'>09.08.2022 3:05:12 pm</span>
-<span class='badge badge-default'>00:02:10:636</span>
+<h5 class="test-status text-pass">Renewal after Reinstatement</h5>
+<span class='badge badge-success'>09.09.2022 10:43:28 am</span>
+<span class='badge badge-danger'>09.09.2022 10:46:28 am</span>
+<span class='badge badge-default'>00:02:59:774</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -258,7 +258,7 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>IRP Reinstate fleet</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Renew with Reinstate</div>
           <div class="status-avatar float-right mr-4">
             <i class="fa fa-paperclip"></i>
           </div>
@@ -266,8 +266,8 @@ eventsCount: 5,
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="Parallel.RIN_001.user_login_as_an_internal_user()">
-                <span>Given User login as an Internal user</span>
+              <div class="step pass-bg" title="Parallel.RWC_001.user_login_as_internal_user()">
+                <span>Given User login as Internal user</span>
       <div>
       </div>
               </div>
@@ -282,8 +282,8 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="Parallel.RIN_001.user_will_navigate_to_irp_reinstate_fleet()">
-                <span>When User will navigate to IRP & Reinstate Fleet</span>
+              <div class="step pass-bg" title="Parallel.RWC_001.user_will_navigate_to_irp()">
+                <span>When User will navigate to IRP</span>
       <div>
       </div>
               </div>
@@ -298,8 +298,8 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="Parallel.RIN_001.user_will_provide_all_the_inputs_select_the_record_on_the_grid()">
-                <span>Then User will provide all the inputs & select the record on the grid</span>
+              <div class="step pass-bg" title="Parallel.RWC_002.user_will_navigate_to_renew_fleet_and_search_for_reinstated_account_number()">
+                <span>Then User will navigate to renew fleet and search for  Reinstated Account Number</span>
       <div>
       </div>
               </div>
@@ -314,8 +314,8 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="Parallel.RIN_001.user_will_navigate_to_distance_page_proceed()">
-                <span>Then User will navigate to Distance page & Proceed</span>
+              <div class="step pass-bg" title="Parallel.RWC_002.user_should_navigate_to_account_screen_and_provides_all_the_required_input_to_proceed()">
+                <span>Then User should navigate to Account screen and provides all the required input to proceed</span>
       <div>
       </div>
               </div>
@@ -330,8 +330,8 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="Parallel.RIN_001.user_will_navigate_to_billing_page_provide_mandatory_inputs_proceed()">
-                <span>Then User will navigate to billing Page & provide mandatory inputs & proceed</span>
+              <div class="step pass-bg" title="Parallel.RWC_002.user_should_navigate_to_account_verification_screen_and_proceed_further()">
+                <span>Then user should navigate to Account verification screen and proceed further</span>
       <div>
       </div>
               </div>
@@ -346,8 +346,8 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="Parallel.RIN_001.user_will_validate_the_success_information_message()">
-                <span>And User will validate the Success Information Message</span>
+              <div class="step pass-bg" title="Parallel.RWC_002.user_should_navigate_to_fleet_screen_and_update_fleet_expiration_date_fleet_type_commodity_class_and_proceed_further()">
+                <span>Then user should navigate to Fleet  screen and update Fleet Expiration Date & Fleet Type & Commodity Class and proceed further</span>
       <div>
       </div>
               </div>
@@ -356,6 +356,294 @@ eventsCount: 5,
       <div>anyname
           <div class="row mb-3"><div class="col-md-3">
 <img data-featherlight='../embedded6.png' src="../embedded6.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.RWC_002.user_should_navigate_to_fleet_verification_screen_and_proceed_further()">
+                <span>Then user should navigate to Fleet verification screen and proceed further</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>AppHooks.Application_Hooks.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded7.png' src="../embedded7.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.RWC_002.user_should_land_on_distance_screen_and_select_estimated_distance_and_proceed_further()">
+                <span>Then user should land on Distance screen and select Estimated Distance and proceed further</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>AppHooks.Application_Hooks.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded8.png' src="../embedded8.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.RWC_002.user_should_navigate_to_distance_verification_screen_and_proceed_further()">
+                <span>Then user should navigate to Distance verification screen and proceed further</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>AppHooks.Application_Hooks.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded9.png' src="../embedded9.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.RWC_002.user_should_land_on_the_weight_group_screen_and_go_for_add_weight_group()">
+                <span>Then user should land on the Weight Group screen and go for Add Weight group</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>AppHooks.Application_Hooks.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded10.png' src="../embedded10.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.RWC_002.user_should_land_on_the_add_weight_group_screen_and_provide_all_the_required_input_to_proceed()">
+                <span>Then user should land on the Add Weight Group screen and provide all the required input to proceed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>AppHooks.Application_Hooks.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded11.png' src="../embedded11.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.RWC_002.user_should_land_on_the_add_weight_group_verification_screen_and_go_for_weight_group()">
+                <span>Then user should land on the Add Weight Group Verification screen and go for  Weight group</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>AppHooks.Application_Hooks.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded12.png' src="../embedded12.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.RWC_002.user_should_land_on_the_weight_group_and_edit_the_existing_weight_group_to_proceed_to_vehicle_screen()">
+                <span>Then user should land on the Weight Group and edit the existing weight group to proceed to Vehicle screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>AppHooks.Application_Hooks.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded13.png' src="../embedded13.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.RWC_002.user_should_land_on_the_vehicle_screen_and()">
+                <span>Then user should land on the Vehicle Screen and</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>AppHooks.Application_Hooks.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded14.png' src="../embedded14.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.RWC_002.user_should_land_on_the_billing_screen_with_open_status_and_request_for_tvr_set_delivery_type_as_pdf_with_comments()">
+                <span>Then user should land on the Billing screen with open status and Request for TVR & set Delivery Type as PDF with Comments</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>AppHooks.Application_Hooks.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded15.png' src="../embedded15.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.RWC_002.system_calculates_fee_and_user_change_the_supplement_status_as_invoiced()">
+                <span>And system calculates Fee and user change the supplement status as invoiced</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>AppHooks.Application_Hooks.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded16.png' src="../embedded16.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.RWC_002.system_should_calculates_the_in_state_fee_and_fees_should_be_waived_overridden_for_some_vehicles()">
+                <span>And system should calculates the In-state fee and Fees should be waived/overridden for some vehicles.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>AppHooks.Application_Hooks.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded17.png' src="../embedded17.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.RWC_002.user_should_check_installment_payment_and_should_be_selected_and_proceed_further()">
+                <span>And user should check Installment payment and should be selected and proceed further</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>AppHooks.Application_Hooks.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded18.png' src="../embedded18.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.RWC_002.system_should_generate_pdf_and_should_go_to_payment_init_screen()">
+                <span>Then system should generate PDF and should go to Payment Init screen.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>AppHooks.Application_Hooks.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded19.png' src="../embedded19.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.RWC_002.user_should_verify_the_screen_and_set_delivery_types_as_pdf_proceed_further()">
+                <span>Then user should verify the screen and set Delivery Types as PDF & proceed further</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>AppHooks.Application_Hooks.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded20.png' src="../embedded20.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.RWC_002.user_should_land_on_the_payment_init_verification_screen_click_on_pay_now()">
+                <span>Then user should land on the Payment Init Verification screen & click on Pay Now</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>AppHooks.Application_Hooks.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded21.png' src="../embedded21.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.RWC_002.user_should_land_on_the_payment_collection_page()">
+                <span>Then user should land on the Payment Collection page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>AppHooks.Application_Hooks.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded22.png' src="../embedded22.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.RWC_002.user_select_multiple_payment_types_and_select_pdf_delivery_type_clicks_paynow()">
+                <span>And user select multiple payment types and select PDF delivery type & clicks Paynow</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>AppHooks.Application_Hooks.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded23.png' src="../embedded23.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Parallel.RWC_002.payment_receipt_should_get_generated_hard_stop_message_should_get_displayed()">
+                <span>Then payment receipt should get generated & Hard stop message should get displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>AppHooks.Application_Hooks.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded24.png' src="../embedded24.png">
     
     </div></div>
 </div>

@@ -791,6 +791,35 @@ public String FleetDetails_MobileNotification() {
 	return ElementUtil.FetchTextBoxValuewithattribute(FleetDetails_MobileNotificationchk,"checked");
 }
 
+public String FleetDetails_IRPRequirementslbl() {
+	return ElementUtil.FetchTextBoxValuewithText(FleetDocCollection_IRPRequirementsFormlbl);
+}
+
+public String FleetDetails_IRPRequirements() {
+	return ElementUtil.FetchDropdownSelectedValue(FleetDocCollection_IRPRequirementsFormdd);
+}
+
+public String FleetDetails_StatementOfUnderstandinglbl() {
+	return ElementUtil.FetchTextBoxValuewithText(FleetDocCollection_StatementOfUnderstandinglbl);
+}
+public String FleetDetails_StatementOfUnderstanding() {
+	return ElementUtil.FetchDropdownSelectedValue(FleetDocCollection_StatementOfUnderstandingdd);
+}
+
+public String FleetDetails_InstallmentAgreementlbl() {
+	return ElementUtil.FetchTextBoxValuewithText(FleetDocCollection_InstallmentAgreementlbl);
+}
+public String FleetDetails_InstallmentAgreement() {
+	return ElementUtil.FetchDropdownSelectedValue(FleetDocCollection_InstallmentAgreementdd);
+}
+public String FleetDetails_PowerOfAttorneylbl() {
+	return ElementUtil.FetchTextBoxValuewithText(FleetDocCollection_PowerOfAttorneylbl);
+}
+public String FleetDetails_PowerOfAttorney() {
+	return ElementUtil.FetchDropdownSelectedValue(FleetDocCollection_PowerOfAttorneydd);
+}
+
+
 
 
 

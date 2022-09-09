@@ -35,7 +35,7 @@ public class VehicleTabPage {
 	
 	@FindBy(xpath="//input[@id='VehicleAction' and contains(@title,'AMEND')]") WebElement VehicleAmendRd; 
 	@FindBy(xpath="//input[@id='VehicleAction' and contains(@title,'DELETE')]") WebElement VehicleDeleteRd; 
-	
+	@FindBy(xpath="//input[@id='VehicleAction' and contains(@title,'Add')]") WebElement VehicleAddRd;
 	
 	@FindBy(xpath="//input[@id='btnUpdateFromPrevYear']") WebElement VehicleUpdateFromPreviousYearbtn;
 	@FindBy(xpath="//input[@id='btnVehicleList']") WebElement VehicleVehicleListbtn;
@@ -49,6 +49,9 @@ public class VehicleTabPage {
 	}
 	public void clickDeleteVehicleRadioButton() {
 		ElementUtil.clickElement(VehicleDeleteRd);
+	}
+	public void clickAddVehicleRadioButton() {
+		ElementUtil.clickElement(VehicleAddRd);
 	}
 	public void clickUpdateFromPreviousYear() {
 		ElementUtil.clickElement(VehicleUpdateFromPreviousYearbtn);

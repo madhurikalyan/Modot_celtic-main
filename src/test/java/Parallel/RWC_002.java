@@ -1,6 +1,8 @@
 package Parallel;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import com.pages.AccountTabPage;
 import com.pages.BillingTab;
 import com.pages.CommonObjects;
@@ -14,6 +16,7 @@ import com.pages.InventoryPage;
 import com.pages.LoginPage;
 import com.pages.Payment;
 import com.pages.PaymentTab;
+import com.pages.VehicleAdd;
 import com.pages.VehicleAmend;
 import com.pages.VehicleDelete;
 import com.pages.VehicleTabPage;
@@ -51,7 +54,7 @@ public class RWC_002 {
 	DistanceVerification Distanceverify=new DistanceVerification(Driver_Factory.getDriver());
 	WeightGroupVerification wgtverify= new WeightGroupVerification(Driver_Factory.getDriver());
 	VehicleVerification vehicleverify =new VehicleVerification(Driver_Factory.getDriver());
-	
+	VehicleAdd vehicleadd=new VehicleAdd(Driver_Factory.getDriver());
 	ElementUtil eleutil =new ElementUtil();
 	
 	
@@ -66,61 +69,61 @@ public class RWC_002 {
 
 	@Then("User should navigate to Account screen and provides all the required input to proceed")
 	public void user_should_navigate_to_account_screen_and_provides_all_the_required_input_to_proceed() throws Exception {
-		eleutil.updateExcel("Account", 0,1,accounttabpage.fetchMCECustomernolbl());
-		eleutil.updateExcel("Account", 1,1,accounttabpage.fetchMCECustomerno());
-		eleutil.updateExcel("Account", 0,2,accounttabpage.fetchRegistrationTypelbl());
-		eleutil.updateExcel("Account", 1,2,accounttabpage.fetchRegistrationType());
-		eleutil.updateExcel("Account", 0,3,accounttabpage.fetchAccountCarrierTypelbl());
-		eleutil.updateExcel("Account", 1,3,accounttabpage.fetchAccountCarrierType());
-		eleutil.updateExcel("Account", 0,5,accounttabpage.fetchIFTAAccountNbrlbl());
-		eleutil.updateExcel("Account", 1,5,accounttabpage.fetchIFTAAccountNbr());
-		eleutil.updateExcel("Account", 0,6,accounttabpage.fetchAccountCustomerStatuslbl());
-		eleutil.updateExcel("Account", 1,6,accounttabpage.fetchAccountCustomerStatus());
-		eleutil.updateExcel("Account", 0,8,accounttabpage.fetchAccountStreet0lbl());
-		eleutil.updateExcel("Account", 1,8,accounttabpage.fetchAccountStreet0());
-		eleutil.updateExcel("Account", 0,9,accounttabpage.fetchAccountZip0lbl());
-		eleutil.updateExcel("Account", 1,9,accounttabpage.fetchAccountZip0());
-		eleutil.updateExcel("Account", 0,10,accounttabpage.fetchAccountJur0lbl());
-		eleutil.updateExcel("Account", 1,10,accounttabpage.fetchAccountJur0());
-		eleutil.updateExcel("Account", 0,11,accounttabpage.fetchAccountCity0lbl());
-		eleutil.updateExcel("Account", 1,11,accounttabpage.fetchAccountCity0());
-		eleutil.updateExcel("Account", 0,12,accounttabpage.fetchAccountCounty0lbl());
-		eleutil.updateExcel("Account", 1,12,accounttabpage.fetchAccountCounty0());
-		eleutil.updateExcel("Account", 0,13,accounttabpage.fetchAccountCountry0lbl());
-		eleutil.updateExcel("Account", 1,13,accounttabpage.fetchAccountCountry0());
+		eleutil.updateExcel("Account", 0,0,accounttabpage.fetchMCECustomernolbl());
+		eleutil.updateExcel("Account", 1,0,accounttabpage.fetchMCECustomerno());
+		eleutil.updateExcel("Account", 0,1,accounttabpage.fetchRegistrationTypelbl());
+		eleutil.updateExcel("Account", 1,1,accounttabpage.fetchRegistrationType());
+		eleutil.updateExcel("Account", 0,2,accounttabpage.fetchAccountCarrierTypelbl());
+		eleutil.updateExcel("Account", 1,2,accounttabpage.fetchAccountCarrierType());
+		eleutil.updateExcel("Account", 0,3,accounttabpage.fetchIFTAAccountNbrlbl());
+		eleutil.updateExcel("Account", 1,3,accounttabpage.fetchIFTAAccountNbr());
+		eleutil.updateExcel("Account", 0,4,accounttabpage.fetchAccountCustomerStatuslbl());
+		eleutil.updateExcel("Account", 1,4,accounttabpage.fetchAccountCustomerStatus());
+		eleutil.updateExcel("Account", 0,5,accounttabpage.fetchAccountStreet0lbl());
+		eleutil.updateExcel("Account", 1,5,accounttabpage.fetchAccountStreet0());
+		eleutil.updateExcel("Account", 0,6,accounttabpage.fetchAccountZip0lbl());
+		eleutil.updateExcel("Account", 1,6,accounttabpage.fetchAccountZip0());
+		eleutil.updateExcel("Account", 0,7,accounttabpage.fetchAccountJur0lbl());
+		eleutil.updateExcel("Account", 1,7,accounttabpage.fetchAccountJur0());
+		eleutil.updateExcel("Account", 0,8,accounttabpage.fetchAccountCity0lbl());
+		eleutil.updateExcel("Account", 1,8,accounttabpage.fetchAccountCity0());
+		eleutil.updateExcel("Account", 0,9,accounttabpage.fetchAccountCounty0lbl());
+		eleutil.updateExcel("Account", 1,9,accounttabpage.fetchAccountCounty0());
+		eleutil.updateExcel("Account", 0,10,accounttabpage.fetchAccountCountry0lbl());
+		eleutil.updateExcel("Account", 1,10,accounttabpage.fetchAccountCountry0());
 		accounttabpage.clickMailingAddress();
-		eleutil.updateExcel("Account", 0,14,accounttabpage.fetchAccountStreet1lbl());
-		eleutil.updateExcel("Account", 1,14,accounttabpage.fetchAccountStreet1());
-		eleutil.updateExcel("Account", 0,15,accounttabpage.fetchAccountZip1lbl());
-		eleutil.updateExcel("Account", 1,15,accounttabpage.fetchAccountZip1());
-		eleutil.updateExcel("Account", 0,16,accounttabpage.fetchAccountJur1lbl());
-		eleutil.updateExcel("Account", 1,16,accounttabpage.fetchAccountJur1());
-		eleutil.updateExcel("Account", 0,17,accounttabpage.fetchAccountCity1lbl());
-		eleutil.updateExcel("Account", 1,17,accounttabpage.fetchAccountCity1());
-		eleutil.updateExcel("Account", 0,18,accounttabpage.fetchAccountCounty1lbl());
-		eleutil.updateExcel("Account", 1,18,accounttabpage.fetchAccountCounty1());
-		eleutil.updateExcel("Account", 0,19,accounttabpage.fetchAccountCountry1lbl());
-		eleutil.updateExcel("Account", 1,19,accounttabpage.fetchAccountCountry1());
+		eleutil.updateExcel("Account", 0,11,accounttabpage.fetchAccountStreet1lbl());
+		eleutil.updateExcel("Account", 1,11,accounttabpage.fetchAccountStreet1());
+		eleutil.updateExcel("Account", 0,12,accounttabpage.fetchAccountZip1lbl());
+		eleutil.updateExcel("Account", 1,12,accounttabpage.fetchAccountZip1());
+		eleutil.updateExcel("Account", 0,13,accounttabpage.fetchAccountJur1lbl());
+		eleutil.updateExcel("Account", 1,13,accounttabpage.fetchAccountJur1());
+		eleutil.updateExcel("Account", 0,14,accounttabpage.fetchAccountCity1lbl());
+		eleutil.updateExcel("Account", 1,14,accounttabpage.fetchAccountCity1());
+		eleutil.updateExcel("Account", 0,15,accounttabpage.fetchAccountCounty1lbl());
+		eleutil.updateExcel("Account", 1,15,accounttabpage.fetchAccountCounty1());
+		eleutil.updateExcel("Account", 0,16,accounttabpage.fetchAccountCountry1lbl());
+		eleutil.updateExcel("Account", 1,16,accounttabpage.fetchAccountCountry1());
+
+		eleutil.updateExcel("Account", 0,17,accounttabpage.fetchAccountAttentionTolbl());
+		eleutil.updateExcel("Account", 1,17,accounttabpage.fetchAccountAttentionTo());
 		
-		eleutil.updateExcel("Account", 0,20,accounttabpage.fetchAccountAttentionTolbl());
-		eleutil.updateExcel("Account", 1,20,accounttabpage.fetchAccountAttentionTo());
-		
-		eleutil.updateExcel("Account", 0,21,accounttabpage.fetchAccountUSDOTNolbl());
-		eleutil.updateExcel("Account", 1,21,accounttabpage.fetchAccountUSDOTNo());
-		eleutil.updateExcel("Account", 0,22,accounttabpage.fetchAccountTPIDlbl());
-		eleutil.updateExcel("Account", 1,22,accounttabpage.fetchAccountTPID());
-		eleutil.updateExcel("Account", 0,23,accounttabpage.fetchAccountContactnamelbl());
-		eleutil.updateExcel("Account", 1,23,accounttabpage.fetchAccountContactname());
-		eleutil.updateExcel("Account", 0,24,accounttabpage.fetchAccountPrimaryPhonelbl());
-		eleutil.updateExcel("Account", 1,24,accounttabpage.fetchAccountPrimaryPhone());
-		eleutil.updateExcel("Account", 0,25,accounttabpage.fetchAccountAlternatePhonelbl());
-		eleutil.updateExcel("Account", 1,25,accounttabpage.fetchAccountAlternatePhone());
-		eleutil.updateExcel("Account", 0,26,accounttabpage.fetchAccountFaxNolbl());
-		eleutil.updateExcel("Account", 1,26,accounttabpage.fetchAccountFaxNo());
-		eleutil.updateExcel("Account", 0,27,accounttabpage.fetchAccountEmailnotificationlbl());
-		eleutil.updateExcel("Account", 1,27,accounttabpage.fetchAccountEmailnotification());
-		eleutil.updateExcel("Account", 0,28,accounttabpage.fetchAccountFaxnotificationlbl());
-		eleutil.updateExcel("Account", 1,28,accounttabpage.fetchAccountFaxnotification());
+		eleutil.updateExcel("Account", 0,18,accounttabpage.fetchAccountUSDOTNolbl());
+		eleutil.updateExcel("Account", 1,18,accounttabpage.fetchAccountUSDOTNo());
+		eleutil.updateExcel("Account", 0,19,accounttabpage.fetchAccountTPIDlbl());
+		eleutil.updateExcel("Account", 1,19,accounttabpage.fetchAccountTPID());
+		eleutil.updateExcel("Account", 0,20,accounttabpage.fetchAccountContactnamelbl());
+		eleutil.updateExcel("Account", 1,20,accounttabpage.fetchAccountContactname());
+		eleutil.updateExcel("Account", 0,21,accounttabpage.fetchAccountPrimaryPhonelbl());
+		eleutil.updateExcel("Account", 1,21,accounttabpage.fetchAccountPrimaryPhone());
+		eleutil.updateExcel("Account", 0,22,accounttabpage.fetchAccountAlternatePhonelbl());
+		eleutil.updateExcel("Account", 1,22,accounttabpage.fetchAccountAlternatePhone());
+		eleutil.updateExcel("Account", 0,23,accounttabpage.fetchAccountFaxNolbl());
+		eleutil.updateExcel("Account", 1,23,accounttabpage.fetchAccountFaxNo());
+		eleutil.updateExcel("Account", 0,24,accounttabpage.fetchAccountEmailnotificationlbl());
+		eleutil.updateExcel("Account", 1,24,accounttabpage.fetchAccountEmailnotification());
+		eleutil.updateExcel("Account", 0,25,accounttabpage.fetchAccountFaxnotificationlbl());
+		eleutil.updateExcel("Account", 1,25,accounttabpage.fetchAccountFaxnotification());
 
 
 		//In Account Page
@@ -274,6 +277,16 @@ public class RWC_002 {
 		eleutil.updateExcel("Fleet", 0,56,fleettabpage.FleetDetails_MobileNotificationlbl());
 		eleutil.updateExcel("Fleet", 1,56,fleettabpage.FleetDetails_MobileNotification());
 		
+		eleutil.updateExcel("Fleet", 0,57,fleettabpage.FleetDetails_IRPRequirementslbl());
+		eleutil.updateExcel("Fleet", 1,57,fleettabpage.FleetDetails_IRPRequirements());
+		eleutil.updateExcel("Fleet", 0,58,fleettabpage.FleetDetails_StatementOfUnderstandinglbl());
+		eleutil.updateExcel("Fleet", 1,58,fleettabpage.FleetDetails_StatementOfUnderstanding());
+		eleutil.updateExcel("Fleet", 0,59,fleettabpage.FleetDetails_InstallmentAgreementlbl());
+		eleutil.updateExcel("Fleet", 1,59,fleettabpage.FleetDetails_InstallmentAgreement());
+		eleutil.updateExcel("Fleet", 0,60,fleettabpage.FleetDetails_PowerOfAttorneylbl());
+		eleutil.updateExcel("Fleet", 1,60,fleettabpage.FleetDetails_PowerOfAttorney());
+		
+			
 		fleettabpage.navigateToServiceProvider();
 		
 		fleettabpage.clickPowerOfAttroney();
@@ -312,29 +325,39 @@ public class RWC_002 {
 	@Then("user should navigate to Fleet verification screen and proceed further")
 	public void user_should_navigate_to_fleet_verification_screen_and_proceed_further() throws Exception {
 		//Fleet Verification Screen
-
-	
-		
-		/*eleutil.updateExcel("Fleet", 0,63,fleetverify.FleetDocCollection_IRPRequirementsFormlbl());
-		eleutil.updateExcel("Fleet", 1,63,fleetverify.FleetDocCollection_IRPRequirementsForm());
-		eleutil.updateExcel("Fleet", 0,64,fleetverify.FleetDocCollection_StatementOfUnderstandinglbl());
-		eleutil.updateExcel("Fleet", 1,64,fleetverify.FleetDocCollection_StatementOfUnderstanding());
-		eleutil.updateExcel("Fleet", 0,65,fleetverify.FleetDocCollection_InstallmentAgreementlbl());
-		eleutil.updateExcel("Fleet", 1,65,fleetverify.FleetDocCollection_InstallmentAgreement());
-		eleutil.updateExcel("Fleet", 0,66,fleetverify.FleetDocCollection_PowerOfAttorneylbl());
-		eleutil.updateExcel("Fleet", 1,66,fleetverify.FleetDocCollection_PowerOfAttorney());
-		*/
 		commonobjects.clickProceed();
 		 Thread.sleep(2000);
 	}
 
 	@Then("user should land on Distance screen and select Estimated Distance and proceed further")
 	public void user_should_land_on_distance_screen_and_select_estimated_distance_and_proceed_further() throws IOException, Exception {
-	 /* distancetabpage.selectYesOrNo(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"DistanceTab",2,4));
+		/*eleutil.updateExcel("Distance", 0,9,distancetabpage.DistanceReportingPeriodFromlbl ());
+     	eleutil.updateExcel("Distance", 1,9,distancetabpage.DistanceReportingPeriodFrom ());
+     	eleutil.updateExcel("Distance", 0,10,distancetabpage.DistanceReportingPeriodTolbl ());
+     	eleutil.updateExcel("Distance", 1,10,distancetabpage.DistanceReportingPeriodTo());
+     	
+     	eleutil.updateExcel("Distance", 0,11,distancetabpage.DistanceUsdotNbrlbl());
+     	eleutil.updateExcel("Distance", 1,11,distancetabpage.DistanceUsdotNbr());
+     	
+     	eleutil.updateExcel("Distance", 0,12,distancetabpage.DistanceEstimatedDistanceChartlbl());
+     	eleutil.updateExcel("Distance", 1,12,distancetabpage.DistanceEstimatedDistanceChart ());
+     	
+     	eleutil.updateExcel("Distance", 0,12,distancetabpage.DistanceOverrideContJurlbl ());
+     	eleutil.updateExcel("Distance", 1,13,distancetabpage.DistanceOverrideContJur());
+     	eleutil.updateExcel("Distance", 0,13,distancetabpage.DistanceActualDistanceGenlbl());
+     	eleutil.updateExcel("Distance", 1,14,distancetabpage.DistanceActualDistanceGen());
+     	eleutil.updateExcel("Distance", 0,14,distancetabpage.DistanceFirstYearEstimatedMileagelbl());
+     	eleutil.updateExcel("Distance", 1,15,distancetabpage.DistanceFirstYearEstimatedMileage());
+     	eleutil.updateExcel("Distance", 0,16,distancetabpage.DistanceTotalFleetDistanceGenlbl());
+     	eleutil.updateExcel("Distance", 1,16,distancetabpage.DistanceTotalFleetDistanceGen());
+     	eleutil.updateExcel("Distance", 0,17,distancetabpage.DistanceFRPMlgQuetionlbl());
+     	eleutil.updateExcel("Distance", 1,15,distancetabpage.DistanceFRPMlgQuetion());*/
+     	
+		distancetabpage.selectYesOrNo(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"DistanceTab",2,4));
 	  commonobjects.enterComments(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"DistanceTab",2,2));
 		commonobjects.checkDeleteAllowed();
 		commonobjects.clickAddorUpdateComment();
-     	commonobjects.clickProceed();*/
+     	commonobjects.clickProceed();
 		
 	}
 
@@ -418,45 +441,116 @@ public class RWC_002 {
      	eleutil.updateExcel("Distance", 1,18,Distanceverify.DistanceDistanceType());
      	eleutil.updateExcel("Distance", 0,19,Distanceverify.DistanceActualDistConfirmationlbl());
      	eleutil.updateExcel("Distance", 1,19,Distanceverify.DistanceActualDistConfirmation());
-
-		commonobjects.clickProceed();*/
+*/
+		commonobjects.clickProceed();
+		Thread.sleep(2000);
 		
 	}
 
 	@Then("user should land on the Weight Group screen and go for Add Weight group")
 	public void user_should_land_on_the_weight_group_screen_and_go_for_add_weight_group() throws IOException, Exception {
 		//Weight Group
-		//wgtgroup.clickAddWeightGroup();
+		wgtgroup.clickAddWeightGroup();
+		wgtgroupadd.selectWeightGroupType(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"WeightGrouptab",2,0));
+		wgtgroupadd.enterWeightGroupNo(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"WeightGrouptab",2,1));
+		wgtgroupadd.selectMaxGrossWeight(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"WeightGrouptab",2,2));
+		
+		commonobjects.clickProceed();
 	}
 
 	@Then("user should land on the Add Weight Group screen and provide all the required input to proceed")
 	public void user_should_land_on_the_add_weight_group_screen_and_provide_all_the_required_input_to_proceed() throws IOException, Exception {
-		/*wgtgroupadd.selectWeightGroupType(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"WeightGrouptab",2,0));
-		
-		wgtgroupadd.enterWeightGroupNo(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"WeightGrouptab",2,1));
-		wgtgroupadd.selectMaxGrossWeight(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"WeightGrouptab",2,2));
-		
-		commonobjects.clickProceed();*/
+		//Weight Group
+				wgtgroup.clickAddWeightGroup();
+				wgtgroupadd.selectWeightGroupType(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"WeightGrouptab",2,8));
+				wgtgroupadd.enterWeightGroupNo(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"WeightGrouptab",2,9));
+				wgtgroupadd.selectMaxGrossWeight(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"WeightGrouptab",2,10));
+				
+				commonobjects.clickProceed();
 		 
 	}
 
 	@Then("user should land on the Add Weight Group Verification screen and go for  Weight group")
-	public void user_should_land_on_the_add_weight_group_verification_screen_and_go_for_weight_group() throws InterruptedException {
+	public void user_should_land_on_the_add_weight_group_verification_screen_and_go_for_weight_group() throws IOException, Exception {
 		//Add  Weight Group verification Screen
-		//commonobjects.clickProceed();
+		//Weight Group
+				wgtgroup.clickAddWeightGroup();
+				wgtgroupadd.selectWeightGroupType(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"WeightGrouptab",2,11));
+				wgtgroupadd.enterWeightGroupNo(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"WeightGrouptab",2,12));
+				wgtgroupadd.selectMaxGrossWeight(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"WeightGrouptab",2,13));
+				
+				commonobjects.clickProceed();
 		
 	}
 
 	@Then("user should land on the Weight Group and edit the existing weight group to proceed to Vehicle screen")
 	public void user_should_land_on_the_weight_group_and_edit_the_existing_weight_group_to_proceed_to_vehicle_screen() throws IOException, Exception {
 			//In Weight Group Screen	
-				//commonobjects.clickDonebtn();
-				
-
-	}
+		
+		//Edit Existing Weight Group
+				wgtgroup.clickHandimg();
+				//Thread.sleep(2000);
+				String Juri_ExcelCount=ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"WeightGrouptab",1,4);
+		for(int i=0;i<Integer.valueOf(Juri_ExcelCount);i++) {
+			System.out.print("i is:"+i);
+		String Juri_Excel=ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"WeightGrouptab",1,i+5);
+		wgtgroupadd.enterWeight_JuriValue(Juri_Excel);
+		}
+			commonobjects.clickProceed();
+			// Weight Group Verification Screen
+			commonobjects.clickProceed();
+			ArrayList<String>  headervalues=wgtverify.FetchTableHeader();
+			for(int i=0;i<headervalues.size();i++) {
+				eleutil.updateExcel("WeightGrouptab",0,i,headervalues.get(i));
+			}
+			ArrayList<String>  RowDatavalues=wgtverify.FetchTableRowData();
+			for(int i=0;i<RowDatavalues.size();i++) {
+				eleutil.updateExcel("WeightGrouptab",1,i,RowDatavalues.get(i));
+			}
+			//Validating JUR WITH DIFFERENT WEIGHTS
+			String[] weightlist=wgtgroup.validateJurisWeightsedited(); //[AL, AR, AZ]
+			for(int i=0;i<Integer.valueOf(Juri_ExcelCount);i++) {
+				String Juri_Excel=ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"WeightGrouptab",1,i+5);
+				System.out.print("Juri from Excel"+weightlist[i]);
+				if(weightlist[i].equalsIgnoreCase(Juri_Excel)){
+					System.out.print("check Weights"+weightlist[i]);
+					assert true;
+				}
+			}
+			
+			//In Weight Group Screen	
+				commonobjects.clickDonebtn();
+				//Thread.sleep(2000);
+				}
 	@Then("user should land on the Vehicle Screen and")
-	public void user_should_land_on_the_vehicle_screen_and() {
-	  
+	public void user_should_land_on_the_vehicle_screen_and() throws IOException, Exception {
+	  Vehicletabpage.clickAddVehicleRadioButton();
+	  commonobjects.clickProceed();
+	  String Addvehilcescount=ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"VehicleAdd",1,0);
+	  int j=0;
+	  for(int i=0;i<Integer.valueOf(Addvehilcescount);i++) {
+	  vehicleadd.enterVINNumber(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"VehicleAdd",1,13+j));
+	  vehicleadd.clickSearch();
+	  Thread.sleep(1000);
+	  vehicleadd.enterDetailsUnitNumber(String.valueOf(i+1));
+	vehicleadd.selectBodyType(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"VehicleAdd",1,14+j));
+	Thread.sleep(2000);
+//	vehicleadd.selectWeightGroupNumber(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"VehicleAdd",1,3));
+	vehicleadd.enterYear(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"VehicleAdd",1,1));
+	vehicleadd.selectMake(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"VehicleAdd",1,2));
+	vehicleadd.enterAxle(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"VehicleAdd",1,3));
+	vehicleadd.enterUnladenWeight(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"VehicleAdd",1,4));
+vehicleadd.enterPurchaseDate(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"VehicleAdd",1,5));
+	vehicleadd.enterPurchaseprice(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"VehicleAdd",1,6));
+	vehicleadd.checkTVR();
+	vehicleadd.enterTVRDays(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"VehicleAdd",1,7));
+	vehicleadd.selectTitleJurisdiction(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"VehicleAdd",1,8));
+	vehicleadd.enterTitleNo(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"VehicleAdd",1,9));
+	vehicleadd.selectInStatePlateType(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"VehicleAdd",1,12));
+	vehicleadd.enterInStatePlateWeight(ExcelReader.FetchDataFromSheet(ConfigReader.readRWCexcel(),"VehicleAdd",1,16+j));
+	//In-State Expiration Date curent month last date -fetch from system
+	j+=5;
+	  }
 	}
 
 	@Then("user should land on the Billing screen with open status and Request for TVR & set Delivery Type as PDF with Comments")

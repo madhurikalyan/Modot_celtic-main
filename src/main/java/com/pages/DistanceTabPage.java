@@ -58,6 +58,9 @@ public class DistanceTabPage {
 			@FindBy(xpath="//label[@for='FRPMlgQuetion']") WebElement Distance_ReportingPeriodQuestionlbl;
 			@FindBy(xpath="//input[@id='FRPMlgQuetion']") List<WebElement> Distance_ReportingPeriodQuestionrd;
 			
+			@FindBy(xpath="//input[@id='FRPMlgQuetion' and @value='Y']") WebElement Distance_QuestionYes;
+			@FindBy(xpath="//input[@id='FRPMlgQuetion' and @value='N']") WebElement Distance_QuestionNo;
+			
 			@FindBy(xpath="//label[@for='DistanceType']") WebElement Distance_DistanceTypelbl;
 			@FindBy(xpath="//select[@id='DistanceType']") WebElement Distance_DistanceTypedd;
 			
@@ -130,10 +133,95 @@ public void validatesubhdr(String hdrvalue) {
 
 
 
+//Fetch Details
+public String DistanceReportingPeriodFromlbl() {
+	return ElementUtil.FetchTextBoxValuewithText(Distance_ReportingperiodFromlbl);
+}
 
+public String DistanceReportingPeriodFrom() {
+	return ElementUtil.FetchTextBoxValuewithattribute(Distance_ReportingperiodFromtxt,"value");
+}
+public String DistanceReportingPeriodTolbl() {
+	return ElementUtil.FetchTextBoxValuewithText(Distance_ReportingperiodTolbl);
+}
 
+public String DistanceReportingPeriodTo() {
+	return ElementUtil.FetchTextBoxValuewithattribute(Distance_ReportingperiodTotxt,"value");
+}
 
+public String DistanceUsdotNbrlbl() {
+	return ElementUtil.FetchTextBoxValuewithText(Distance_USDOTNolbl);
+}
 
+public String DistanceUsdotNbr() {
+	return ElementUtil.FetchTextBoxValuewithattribute(Distance_USDOTNoFromtxt,"value");
+}
+
+public String DistanceEstimatedDistanceChartlbl() {
+	return ElementUtil.FetchTextBoxValuewithText(Distance_VehicleDistanceChartlbl);
+}
+
+public String DistanceEstimatedDistanceChart() {
+	return ElementUtil.FetchTextBoxValuewithattribute(Distance_VehicleDistanceChartchk,"checked");
+}
+public String DistanceOverrideContJurlbl() {
+	return ElementUtil.FetchTextBoxValuewithText(Distance_OverrideContJurlbl);
+}
+
+public String DistanceOverrideContJur() {
+	return ElementUtil.FetchTextBoxValuewithattribute(Distance_OverrideContJurchk,"checked");
+}
+
+public String DistanceEstimatedDistanceGenlbl() {
+	return ElementUtil.FetchTextBoxValuewithText(Distance_EstimatedDistancelbl);
+}
+
+public String DistanceEstimatedDistanceGen() {
+	return ElementUtil.FetchTextBoxValuewithattribute(Distance_EstimatedDistancetxt,"value");
+}
+
+public String DistanceActualDistanceGenlbl() {
+	return ElementUtil.FetchTextBoxValuewithText(Distance_ActualDistancelbl);
+}
+
+public String DistanceActualDistanceGen() {
+	return ElementUtil.FetchTextBoxValuewithattribute(Distance_ActualDistancetxt,"value");
+}
+
+public String DistanceTotalFleetDistanceGenlbl() {
+	return ElementUtil.FetchTextBoxValuewithText(Distance_TotalFleetDistancelbl);
+}
+
+public String DistanceTotalFleetDistanceGen() {
+	return ElementUtil.FetchTextBoxValuewithattribute(Distance_TotalFleetDistancetxt,"value");
+}
+
+public String DistanceFRPMlgQuetionlbl() {
+	return ElementUtil.FetchTextBoxValuewithText(Distance_ReportingPeriodQuestionlbl);
+}
+
+public String DistanceFRPMlgQuetion() {
+	String value;
+	if(!(ElementUtil.FetchTextBoxValuewithattribute(Distance_QuestionYes,"checked").isEmpty())) {
+		value=ElementUtil.FetchTextBoxValuewithattribute(Distance_QuestionYes,"value"); }
+	else {
+		value=ElementUtil.FetchTextBoxValuewithattribute(Distance_QuestionNo,"value"); }
+	return value;
+}
+public String DistanceDistanceTypelbl() {
+	return ElementUtil.FetchTextBoxValuewithText(Distance_DistanceTypelbl);
+}
+
+public String DistanceDistanceType() {
+	return ElementUtil.FetchTextBoxValuewithattribute(Distance_DistanceTypedd,"value");
+}
+public String DistanceActualDistConfirmationlbl() {
+	return ElementUtil.FetchTextBoxValuewithText(Distance_ActualDistanceQuestionlbl);
+}
+
+public String DistanceActualDistConfirmation() {
+	return ElementUtil.FetchTextBoxValuewithattribute(Distance_ActualDistanceQuestionchk,"value");
+}
 
 
 
